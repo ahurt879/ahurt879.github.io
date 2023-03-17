@@ -19,7 +19,7 @@ function updateText() {
     if (day > 0 && day < 6 && hour >= 8 && hour < 17) {
       // Weekday between 8am and 5pm
       text = 'Call Now, We\'re Open';
-    } else if (day > 0 && day < 4 && hour >= 17) {
+    } else if (day > 0 && day <= 4 && hour >= 17) {
       // Monday to Thursday after 5pm
       text = 'We Open Tomorrow at 8am';
     } else if (day === 5 && hour >= 17) {
