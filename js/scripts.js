@@ -1,10 +1,10 @@
-/*!
+/* !
 * Start Bootstrap - Business Casual v7.0.8 (https://startbootstrap.com/theme/business-casual)
 * Copyright 2013-2022 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
 */
 // Highlights current date on contact page
-window.addEventListener('DOMContentLoaded', event => {
+window.addEventListener('DOMContentLoaded', () => {
   const listHoursArray = document.body.querySelectorAll('.list-hours li');
   const todayIndex = new Date().getDay();
   if (listHoursArray.length > todayIndex) {
@@ -13,8 +13,7 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 // Dynamic text for Buisness Hours
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded', () => {
   function updateText() {
     const date = new Date();
     const hour = date.getHours();
@@ -35,22 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
       text = 'Enjoy Your Weekend! We\'ll be back Monday at 8am.';
     } else {
       // Outside of business hours
-      text = 'We\'re currently closed. Our business hours are Monday to Friday, 8am to 5pm.';
+      text = 'Our business hours are Monday to Friday, 8am to 5pm.';
     }
 
     const dynamicText = document.getElementById('dynamic-text');
     if (dynamicText) {
       dynamicText.textContent = text;
+    }
   }
-}
 
   // Call updateText initially
   updateText();
 
   // Call updateText every minute to update the text
   setInterval(updateText, 60000);
-
 });
-
-  
-  
