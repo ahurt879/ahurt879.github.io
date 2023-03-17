@@ -5,17 +5,22 @@
 */
 // Highlights current date on contact page
 window.addEventListener('DOMContentLoaded', event => {
-    const listHoursArray = document.body.querySelectorAll('.list-hours li');
-    listHoursArray[new Date().getDay()].classList.add(('today'));
-})
+  const listHoursArray = document.body.querySelectorAll('.list-hours li');
+  const todayIndex = new Date().getDay();
+  if (listHoursArray.length > todayIndex) {
+    listHoursArray[todayIndex].classList.add('today');
+  }
+});
 
 // Dynamic text for Buisness Hours
-function updateText() {
+document.addEventListener('DOMContentLoaded', function() {
+
+  function updateText() {
     const date = new Date();
     const hour = date.getHours();
     const day = date.getDay();
     let text = '';
-  
+
     if (day > 0 && day < 6 && hour >= 8 && hour < 17) {
       // Weekday between 8am and 5pm
       text = 'Call Now, We\'re Open';
@@ -32,14 +37,20 @@ function updateText() {
       // Outside of business hours
       text = 'We\'re currently closed. Our business hours are Monday to Friday, 8am to 5pm.';
     }
-  
-    document.getElementById('dynamic-text').textContent = text;
+
+    const dynamicText = document.getElementById('dynamic-text');
+    if (dynamicText) {
+      dynamicText.textContent = text;
   }
-  
+}
+
   // Call updateText initially
   updateText();
-  
+
   // Call updateText every minute to update the text
   setInterval(updateText, 60000);
+
+});
+
   
   
