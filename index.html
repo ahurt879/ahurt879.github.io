@@ -26,6 +26,10 @@
         <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
+        <a href="#main-content-1" class="sr-only sr-only-focusable">Skip to business description</a>
+        <a href="#main-content-2" class="sr-only sr-only-focusable">Skip to our service goals</a>
+        <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main menu</a>
+        <a href="#footer" class="sr-only sr-only-focusable">Skip to footer</a>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
                 <span class="site-heading-upper text-primary mb-3">Welcome &nbsp; To</span>
@@ -47,7 +51,7 @@
                 </div>
             </div>
         </nav>
-        <section class="page-section clearfix">
+        <section class="page-section clearfix" id="main-content-1" aria-label="Description of the business and its goals">
             <div class="container">
                 <div class="intro">
                     <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="assets/img/intro.jpg" alt="Blue Ridge Mountains">
@@ -56,13 +60,15 @@
                             <span class="section-heading-upper">Authorized Onsite Soil Evaluators for</span>
                             <span class="section-heading-lower">Septic System & Water Supply Solutions</span>
                         </h2>
-                        <p class="mb-3">We are a small business operating across Central and Southwest Virginia. Our goal is to supply homeowners, home builders, and land developers with designs customized to fit their onsite sewage and water supply needs.</p>
+                        <p class="mb-3">
+                            We are a small business operating across Central and Southwest Virginia. Our goal is to supply homeowners, home builders, and land developers with designs customized to fit their onsite sewage and water supply needs.
+                        </p>
                         <div class="intro-button mx-auto"><a class="btn btn-primary btn-xl" href="store.html">Contact Us Today!</a></div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="page-section cta">
+        <section class="page-section cta" id="main-content-2" aria-label="Description of our service goals">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 mx-auto">
@@ -77,7 +83,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer text-faded text-center py-5">
+        <footer class="footer text-faded text-center py-5" id="footer">
             <div class="container"><p class="m-0 small">Copyright &copy; siteandsoil.com 2023</p></div>
         </footer>
         <script src="js/scripts.js"></script>

@@ -26,9 +26,13 @@
         <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
+        <a href="#main-content-1" class="sr-only sr-only-focusable">Skip to business hours</a>
+        <a href="#main-content-2" class="sr-only sr-only-focusable">Skip to end message</a>
+        <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main menu</a>
+        <a href="#footer" class="sr-only sr-only-focusable">Skip to footer</a>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3"></span>
+                <span class="site-heading-upper text-primary mb-3 visually-hidden">Thank You for Visiting, Our buisness hours contact information is listed below.</span>
                 <span class="site-heading-lower">Site & Soil Designs, Inc.</span>
             </h1>
         </header>
@@ -47,7 +51,7 @@
                 </div>
             </div>
         </nav>
-        <section class="page-section cta">
+        <section class="page-section cta" id="main-content-1">
             <div class="container">
                 <div class="row">
                     <div class="col-xl-9 mx-auto">
@@ -105,7 +109,7 @@
                 </div>
             </div>
         </section>
-        <section class="page-section about-heading">
+        <section class="page-section about-heading" id="main-content-2">
             <div class="container">
                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/about.jpg" alt="Primary Service Area Map for Soil Consulting Services">
                 <div class="about-heading-content">
@@ -126,7 +130,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer text-faded text-center py-5">
+        <footer class="footer text-faded text-center py-5" id="footer">
             <div class="container"><p class="m-0 small">Copyright &copy; siteandsoil.com 2023</p></div>
         </footer>
         <script src="js/scripts.js"></script>

@@ -26,9 +26,12 @@
         <link href="css/styles.css" rel="stylesheet">
     </head>
     <body>
+        <a href="#main-content-1" class="sr-only sr-only-focusable">Skip to content</a>
+        <a href="#mainNav" class="sr-only sr-only-focusable">Skip to main menu</a>
+        <a href="#footer" class="sr-only sr-only-focusable">Skip to footer</a>
         <header>
             <h1 class="site-heading text-center text-faded d-none d-lg-block">
-                <span class="site-heading-upper text-primary mb-3"></span>
+                <span class="site-heading-upper text-primary mb-3 visually-hidden">This page describes where we operate.</span>
                 <span class="site-heading-lower">Site & Soil Designs, Inc.</span>
             </h1>
         </header>
@@ -47,7 +50,7 @@
                 </div>
             </div>
         </nav>
-        <section class="page-section about-heading">
+        <section class="page-section about-heading" id="main-content-1" aria-label="Description of Buisness Owner and Areas We Service.">
             <div class="container">
                 <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="assets/img/about.jpg" alt="Primary Service Area Map for Soil Consulting Services">
                 <div class="about-heading-content">
@@ -58,9 +61,11 @@
                                     <span class="section-heading-upper">A Small Business Serving You</span>
                                     <span class="section-heading-lower text-center">About Site & Soil Designs, Inc.</span>
                                 </h2>
-                                <p>Adam Hurt is a Authorized Onsite Soil Evaluator (AOSE) that has evaluated soils and inspected septic systems in 28 counties across Central and Southwest VA. Our primary service area is the Roanoke-Bedford Region and surrounding areas.  The larger the project – the farther we will travel outside our primary service area to serve you.</p>
+                                <p class="mb-3">
+                                    Adam Hurt is a Authorized Onsite Soil Evaluator (AOSE) that has evaluated soils and inspected septic systems in 28 counties across Central and Southwest VA. Our primary service area is the Roanoke-Bedford Region and surrounding areas.  The larger the project – the farther we will travel outside our primary service area to serve you.>
+                                </p>
                                 <p class="mb-0 text-center">
-                                    <a href="store.html">Call or Email</a> us today to schedule a consultation.
+                                    <a href="store.html" aria-label="Call or email us today to schedule a consultation.">Call or Email</a> us today to schedule a consultation.
                                 </p>
                             </div>
                         </div>
@@ -68,7 +73,7 @@
                 </div>
             </div>
         </section>
-        <footer class="footer text-faded text-center py-5">
+        <footer class="footer text-faded text-center py-5" id="footer">
             <div class="container"><p class="m-0 small">Copyright &copy; siteandsoil.com 2023</p></div>
         </footer>
         <script src="js/scripts.js"></script>
