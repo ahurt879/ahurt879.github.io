@@ -890,3 +890,89 @@ p {
 .address strong {
   font-size: 1.2rem;
 }
+
+/* Skip links: hidden until focused (Bootstrap 5 pattern) */
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+.visually-hidden-focusable:focus {
+  position: fixed;
+  top: 0.5rem;
+  left: 0.5rem;
+  z-index: 2000;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #000;
+  border-radius: 0.25rem;
+}
+
+/* Contact form (matches Business Casual theme) */
+.contact-form .form-label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: "Raleway", -apple-system, sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: left;
+}
+.contact-form .form-control {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 0.9rem;
+  margin-bottom: 1.1rem;
+  font-family: "Lora", Georgia, serif;
+  font-size: 1rem;
+  color: #212529;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.contact-form .form-control:focus {
+  outline: 0;
+  border-color: #e6a756;
+  box-shadow: 0 0 0 0.2rem rgba(230, 167, 86, 0.35);
+}
+.contact-form .form-control.is-invalid {
+  border-color: #b02a37;
+}
+.contact-form .field-error {
+  display: none;
+  margin: -0.7rem 0 1rem;
+  font-size: 0.85rem;
+  color: #b02a37;
+  text-align: left;
+}
+.contact-form .form-control.is-invalid + .field-error {
+  display: block;
+}
+.contact-form .form-hint {
+  font-size: 0.85rem;
+  color: #6c757d;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
+.contact-form .form-status {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+.contact-form .form-status.status-ok { color: #2e7d32; }
+.contact-form .form-status.status-err { color: #b02a37; }
+/* Honeypot: hide from humans, leave in DOM for bots */
+.contact-form .hp-field {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
