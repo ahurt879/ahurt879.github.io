@@ -1,0 +1,10 @@
+# robots.txt for siteandsoil.com
+# Upload to the root of your site: https://siteandsoil.com/robots.txt
+#
+# Check first whether one already exists at that address. If it
+# does, don't overwrite it blindly -- just add the Sitemap line.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://siteandsoil.com/sitemap.xml
